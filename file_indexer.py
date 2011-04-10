@@ -6,6 +6,7 @@ from collections import defaultdict
 
 eliminate_punctuation = partial(re.sub, '[{0}]'.format(string.punctuation), '')
 
+
 def index_file(file_name):
     d = defaultdict(list)
     with open(file_name) as f:
@@ -14,8 +15,9 @@ def index_file(file_name):
             if line.strip():
                 for word in line.split():
                     plain_word = eliminate_punctuation(word.lower())
-                    d[plain_word].append(lineno+1)
-    return d
+                    d[plain_word].append(lineno + 1)
+    return dict(d)
+
 
 def main(argv=sys.argv):
     return index_file(argv[1])
