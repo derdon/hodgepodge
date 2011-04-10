@@ -7,12 +7,12 @@ def gnomesort(l):
         return l
     i = 0
     while True:
-        current = l[i]
+        current_item = l[i]
         try:
-            next = l[i + 1]
+            next_item = l[i + 1]
         except IndexError:
             break
-        if next < current:
+        if next_item < current_item:
             l[i], l[i + 1] = l[i + 1], l[i]
             if i == 0:
                 i += 1
