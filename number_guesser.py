@@ -3,8 +3,6 @@
 import sys
 import random
 
-#TODO: use the cmd module
-
 def ai_guesser(number, min_num, max_num):
     """number must be higher than the highest value from the set
     "too small" and lower than the smallest value from the set "too high"
