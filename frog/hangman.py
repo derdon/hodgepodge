@@ -101,7 +101,7 @@ class HangmanWidget(object):
                 self.bracket,
                 self.rope,
                 self.head,
-                self.body,    
+                self.body,
                 self.first_leg,
                 self.second_leg,
                 self.first_arm,
