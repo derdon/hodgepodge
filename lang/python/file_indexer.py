@@ -10,12 +10,12 @@ eliminate_punctuation = partial(re.sub, '[{0}]'.format(string.punctuation), '')
 def index_file(file_name):
     d = defaultdict(list)
     with open(file_name) as f:
-        for lineno, line in enumerate(f):
+        for lineno, line in enumerate(f, 1):
             # ignore empty lines
             if line.strip():
                 for word in line.split():
                     plain_word = eliminate_punctuation(word.lower())
-                    d[plain_word].append(lineno + 1)
+                    d[plain_word].append(lineno)
     return dict(d)
 
 
