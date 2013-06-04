@@ -76,7 +76,7 @@ class CommandManager(object):
 
     def do(self, command):
         """Execute the given command. Exceptions raised from the command are
-        not catched.
+        not caught.
 
         """
         command()
